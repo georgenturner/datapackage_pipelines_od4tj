@@ -1,0 +1,45 @@
+-
+year: 2014
+  entity: Credit Suisse
+  inputs:
+    # Path to the PDF you uploaded in the project
+    - url: ./2014_barclays_country_snapshot.pdf
+      kind: pdf
+      parameters:
+        # Paste the dimensions of the selection you made in Tabula
+        dimensions: [
+                        {
+                            "page": 130,
+                            "extraction_method": "stream",
+                            "selection_id": "L1500896446147",
+                            "x1": 45.389795074462896,
+                            "x2": 560.3035359191895,
+                            "y1": 473.6141520632897,
+                            "y2": 678.9843724002037,
+                            "width": 514.9137408447266,
+                            "height": 205.37022033691406
+                        },
+                        {
+                            "page": 131,
+                            "extraction_method": "stream",
+                            "selection_id": "O1500896175622",
+                            "x1": 29.763800048828127,
+                            "x2": 559.5594409179688,
+                            "y1": 135.79502150909045,
+                            "y2": 350.83847686187363,
+                            "width": 529.7956408691407,
+                            "height": 215.0434553527832
+                        }
+                    ]
+  processing: {}
+  model:
+    headers:
+      - name: country
+      - name: subsidiary
+      - name: activity
+      - name: full_time_equivalents
+        type: number
+      - name: turnover
+        type: number
+        currency: usd
+        factor: 1m
